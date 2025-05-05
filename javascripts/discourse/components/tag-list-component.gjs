@@ -29,7 +29,6 @@ export default class TagListComponent extends Component {
 
   @action
   getTags() {
-    debugger;
     this.tags = this.session.get("bars_tag_list_tags")
     this.tagGroups = this.session.get("bars_tag_list_tag_groups");
     if (this.tags?.length > 0 && this.tagGroups?.length > 0) {
