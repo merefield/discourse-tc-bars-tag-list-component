@@ -1,10 +1,8 @@
-# 🏷️ Layouts Tag List Widget
+# 🏷️ Bars! Tag List Component
 
 ## 🔍 Overview
 
 The Tag List Component allows you to display tags from Discourse in a sidebar using [Bars!](https://meta.discourse.org/t/discourse-bars-a-sidebar-framework/298216) or Discourse's Right Sidebar Blocks Component.
-
-![Banner Image](.github/images/cover.png)
 
 > ⚠️ **Please ensure that you have tagging enabled in your Discourse settings for this widget to work.**
 
