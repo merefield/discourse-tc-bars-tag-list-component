@@ -1,8 +1,8 @@
 {
-  "name": "Layouts Tag List Widget",
+  "name": "Bars Tag List Component",
   "component": true,
   "authors": "Keegan George, Robert Barrow",
-  "theme_version": "1.2.0",
-  "about_url": "https://github.com/paviliondev/layouts-tag-list-widget",
-  "license_url": "https://github.com/paviliondev/layouts-tag-list-widget/blob/master/LICENSE.txt"
+  "theme_version": "2.0.0",
+  "about_url": "https://github.com/paviliondev/bars-tag-list-component",
+  "license_url": "https://github.com/paviliondev/bars-tag-list-component/blob/master/LICENSE.txt"
 }

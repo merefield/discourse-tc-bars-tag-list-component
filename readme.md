@@ -12,7 +12,7 @@ The Tag List Widget allows you to display tags from Discourse in a sidebar using
 
 | Title                 | Link                                                                              |
 | --------------------- | --------------------------------------------------------------------------------- |
-| ⚙️ **Widget**         | [Layouts Tag List Widget](https://github.com/paviliondev/layouts-tag-list-widget) |
+| ⚙️ **Widget**         | [Layouts Tag List Widget](https://github.com/paviliondev/bars-tag-list-widget) |
 | 🔌 **Base Plugin**    | [Custom Layouts Widget](https://meta.discourse.org/t/custom-layouts-plugin/55208) |
 | 👨‍💻 **Author**         | [Keegan George](https://github.com/keegangeorge/), [Merefield](https://github.com/merefield/)|
 | #️⃣ **Version**        | `1.2.0`                                                                           |
