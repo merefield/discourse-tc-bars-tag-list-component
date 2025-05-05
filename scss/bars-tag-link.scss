@@ -1,5 +1,5 @@
-.layouts-tag-list, .rs-layouts-tag-list, .component-widget .tag-list {
-  .layouts-tag-link {
+.bars-tag-list, .rs-bars-tag-list, .component-widget .tag-list {
+  .bars-tag-link {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -51,7 +51,7 @@
     }
   }
 
-  .layouts-tag-contents {
+  .bars-tag-contents {
     display: flex;
     flex-flow: $display-style wrap;
   }
