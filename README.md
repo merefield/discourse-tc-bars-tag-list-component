@@ -10,7 +10,7 @@ The Tag List Component allows you to display tags from Discourse in a sidebar us
 
 | Title                 | Link                                                                              |
 | --------------------- | --------------------------------------------------------------------------------- |
-| ⚙️ **Component**      | [Tag List Component](https://github.com/paviliondev/bars-tag-list-widget) |
+| ⚙️ **Component**      | [Tag List Component](https://github.com/merefield/discourse-tc-bars-tag-list-component) |
 | 🔌 **Base Plugin**    | [Bars!](https://meta.discourse.org/t/discourse-bars-a-sidebar-framework/298216) |
 | 👨‍💻 **Author**         | [Keegan George](https://github.com/keegangeorge/), [Merefield](https://github.com/merefield/)|
 | #️⃣ **Version**        | `2.0.0`                                                                           |
