@@ -38,6 +38,7 @@ export default class TagListComponent extends Component {
     this.loading = true;
 
     ajax(`/tags.json`).then((tagList) => {
+      debugger;
       // If site is using Tag Groups:
       let rawTagGroups;
       let tagGroups;
@@ -118,7 +119,7 @@ export default class TagListComponent extends Component {
                 {{#unless tagGroup.hidden}}
                   <div class="bars-tag-group-contents">
                     {{#each tagGroup.tags as |tag|}}
-                      <li class="bars-tag-link" data-tag-name="{{tag.text}}" onClick={{action this.onTagClick tag}}>
+                      <li class="bars-tag-link" data-tag-name="{{tag.text}}" onClick={{fn this.onTagClick tag}}>
                         <span class="discourse-tag {{this.siteSettings.tag_style}}">{{tag.text}}</span>
                         {{#if settings.show_count}}
                           <span class="tag-count">x {{tag.count}}</span>
