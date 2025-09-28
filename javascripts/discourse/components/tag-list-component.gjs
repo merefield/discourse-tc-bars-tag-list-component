@@ -38,7 +38,6 @@ export default class TagListComponent extends Component {
     this.loading = true;
 
     ajax(`/tags.json`).then((tagList) => {
-      debugger;
       // If site is using Tag Groups:
       let rawTagGroups;
       let tagGroups;
