@@ -1,35 +1,35 @@
-import Component from '@glimmer/component';
-import { getOwner } from '@ember/application';
-import { action } from '@ember/object';
-import { tracked } from '@glimmer/tracking';
-import DiscourseURL from "discourse/lib/url";
-import { ajax } from 'discourse/lib/ajax';
-import { i18n } from "discourse-i18n";
-import { service } from "@ember/service";
+/* global settings, themePrefix */
+
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
 import { fn } from "@ember/helper";
-import { popupAjaxError } from "discourse/lib/ajax-error";
+import { action } from "@ember/object";
 import didInsert from "@ember/render-modifiers/modifiers/did-insert";
+import { service } from "@ember/service";
+import ConditionalLoadingSpinner from "discourse/components/conditional-loading-spinner";
 import DButton from "discourse/components/d-button";
 import icon from "discourse/helpers/d-icon";
-import TagChooser from "select-kit/components/tag-chooser";
-import ConditionalLoadingSpinner from "discourse/components/conditional-loading-spinner";
-import { isHidden, sortTags } from '../lib/widget-helpers';
-
+import { ajax } from "discourse/lib/ajax";
+import { popupAjaxError } from "discourse/lib/ajax-error";
+import DiscourseURL from "discourse/lib/url";
+import { i18n } from "discourse-i18n";
+import { isHidden, sortTags } from "../lib/widget-helpers";
 
 export default class TagListComponent extends Component {
   @service siteSettings;
   @service session;
-  @tracked tags = this.session.get("bars_tag_list_tags")
+
+  @tracked tags = this.session.get("bars_tag_list_tags");
   @tracked tagGroups = this.session.get("bars_tag_list_tag_groups");
   @tracked loading = false;
-  
+
   get showCount() {
-    return this.settings.show
+    return this.settings.show;
   }
 
   @action
   getTags() {
-    this.tags = this.session.get("bars_tag_list_tags")
+    this.tags = this.session.get("bars_tag_list_tags");
     this.tagGroups = this.session.get("bars_tag_list_tag_groups");
     if (this.tags?.length > 0 && this.tagGroups?.length > 0) {
       return;
@@ -44,11 +44,12 @@ export default class TagListComponent extends Component {
 
       if (this.siteSettings.tags_listed_by_group) {
         rawTagGroups = tagList.extras.tag_groups;
-        rawTagGroups = rawTagGroups.map((rawGroup) => (
-          { ...rawGroup, hidden: !settings.tag_groups_default_expanded }
-        ));
+        rawTagGroups = rawTagGroups.map((rawGroup) => ({
+          ...rawGroup,
+          hidden: !settings.tag_groups_default_expanded,
+        }));
         tagGroups = rawTagGroups.filter((tagGroup) => {
-          tagGroup['tags'] = tagGroup.tags.filter((tag) => {
+          tagGroup["tags"] = tagGroup.tags.filter((tag) => {
             return !isHidden(tag.text, settings.hidden_tags);
           });
           sortTags(tagGroup.tags);
@@ -69,13 +70,13 @@ export default class TagListComponent extends Component {
       this.loading = false;
       this.tags = tags;
       this.tagGroups = tagGroups;
-      const session = getOwner(this).lookup("session:main");
       this.session.set("bars_tag_list_tags", tags);
       this.session.set("bars_tag_list_tag_groups", tagGroups);
-    }).catch((error) => {
-      this.loading = false;
-      popupAjaxError(error);
-    });
+    })
+      .catch((error) => {
+        this.loading = false;
+        popupAjaxError(error);
+      });
   }
 
   @action
