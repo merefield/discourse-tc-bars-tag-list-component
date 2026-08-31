@@ -1,14 +1,14 @@
 hidden_tags:
   type: list
   list_type: tag
-  default: ''
+  default: ""
   description:
-    en: 'Select specific tags to hide in the layout'
+    en: "Select specific tags to hide in the layout"
 hidden_tag_groups:
   type: list
-  default: ''
+  default: ""
   description:
-    en: 'Enter the names of the tag groups you wish to hide in the layout.'
+    en: "Enter the names of the tag groups you wish to hide in the layout."
 display_style:
   default: row
   type: enum
@@ -16,24 +16,30 @@ display_style:
     - row
     - column
   description:
-    en: 'Select how you would like tags to appear. (Row for one after another, column for one on each line)'
+    en: "Select how you would like tags to appear. (Row for one after another, column for one on each line)"
 show_count:
   default: false
   type: bool
   description:
-    en: 'Show the count beside each tag.'
+    en: "Show the count beside each tag."
+tag_count_limit:
+  default: 20
+  min: 1
+  type: integer
+  description:
+    en: "Number of tags to reveal at a time before showing the Show more button."
 sort_type:
-  default: 'Count Descending'
+  default: "Count Descending"
   type: enum
   choices:
-    - 'Count Ascending'
-    - 'Count Descending'
-    - 'Alphabetical Ascending'
-    - 'Alphabetical Descending'
+    - "Count Ascending"
+    - "Count Descending"
+    - "Alphabetical Ascending"
+    - "Alphabetical Descending"
   description:
-    en: 'Select the manner in which tags should be sorted'
+    en: "Select the manner in which tags should be sorted"
 tag_groups_default_expanded:
   default: true
   type: bool
   description:
-    en: 'Check to make tag groups expanded by default'
+    en: "Check to make tag groups expanded by default"

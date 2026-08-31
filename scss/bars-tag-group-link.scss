@@ -1,5 +1,8 @@
-.bars-tag-list, .rs-bars-tag-list, .component-widget .tag-list {
+.bars-tag-list,
+.rs-bars-tag-list,
+.component-widget .tag-list {
   .bars-tag-group {
+    list-style: none;
     padding: 0;
     margin: 0;
   }
@@ -12,7 +15,6 @@
     align-items: center;
     justify-content: flex-start;
     flex-basis: 100%;
-    padding-left: 0;
     padding: 1rem 0;
 
     .bars-tag-group-title {
@@ -20,7 +22,7 @@
     }
 
     svg {
-      margin-right: 0.5rem;
+      margin-inline-end: 0.5rem;
     }
   }
 
