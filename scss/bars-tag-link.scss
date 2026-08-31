@@ -1,19 +1,27 @@
-.bars-tag-list, .rs-bars-tag-list, .component-widget .tag-list {
+.bars-tag-list,
+.rs-bars-tag-list,
+.component-widget .tag-list {
   .bars-tag-link {
     display: flex;
     align-items: center;
     cursor: pointer;
     margin: 0.15rem;
 
+    > a {
+      display: inline-flex;
+      align-items: center;
+    }
+
     .tag-count {
       font-size: var(--font-down-1);
       vertical-align: middle;
       line-height: var(--line-height-small);
-      margin-left: 0.25rem;
+      margin-inline-start: 0.25rem;
     }
 
     .box {
       transition: background-color 0.25s ease;
+
       &:hover,
       &:focus {
         background-color: var(--primary-low-mid);
@@ -22,12 +30,15 @@
 
     .bullet {
       transition: color 0.25s ease;
+
       &::before {
         transition: background-color 0.25s ease;
       }
+
       &:hover,
       &:focus {
         color: var(--primary-high);
+
         &::before {
           background-color: var(--primary-medium);
         }
@@ -37,10 +48,11 @@
     &:not(:last-child) {
       .simple::after {
         @if $display-style == row {
-          content: ',';
+          content: ",";
         }
       }
     }
+
     .simple {
       transition: color 0.25s ease;
 
@@ -54,5 +66,6 @@
   .bars-tag-contents {
     display: flex;
     flex-flow: $display-style wrap;
+    list-style: none;
   }
 }

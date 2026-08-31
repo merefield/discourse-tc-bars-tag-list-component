@@ -37,6 +37,10 @@ Toggling this setting will display the number of topics for each tag beside the 
 
 <img src=".github/images//count.png" width="215">
 
+### Tag count limit
+
+Sets how many tags are rendered in each list at a time. When more tags are available, the component displays a **Show more** button that reveals the next batch.
+
 ### 📶 Sort Type
 
 Select the manner in which tags should be sorted.
